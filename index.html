@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Write Data</title>
+</head>
+<body>
+
+	<!-- Riot Mount Point -->
+	<app></app>
+
+	<!-- Riot TAGS -->
+	<script src="tags/app.tag" type="riot/tag"></script>
+
+	<!-- Riot + Firebase IMPORT -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.8.1/riot+compiler.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+
+	<script>
+	  // Initialize Firebase
+		var config = {
+    apiKey: "AIzaSyCEeF4NrVhbxyTkUT6h4Fx3AcnJiVpFHVA",
+    authDomain: "startfirebase-2c396.firebaseapp.com",
+    databaseURL: "https://startfirebase-2c396.firebaseio.com",
+    projectId: "startfirebase-2c396",
+    storageBucket: "startfirebase-2c396.appspot.com",
+    messagingSenderId: "865791582375"
+  };
+  firebase.initializeApp(config);
+		// Firebase Cached References
+		var database = firebase.database();
+		var rootRef = database.ref('/');
+		// Initialize RiotJS
+		riot.mount('*');
+	</script>
+
+</body>
+</html>
